@@ -16,24 +16,30 @@ SUI Java SDK
 
 ## Quick start
 
- ### Windows 
- 1. Clone repository 
+ ### Windows / Linux / WSL
+
+  Prerequisites : JDK 11+, Maven
+
+ Toc check that you're ready type
+ > mvn -version
+
+You should get something similar to it 
+> Apache Maven 3.8.1 (05c21c65bdfed0f71a2f2ada8b84da59348c4c5d)
+Maven home: /mnt/c/pub/maven
+Java version: 11.0.16, vendor: Ubuntu, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "5.10.102.1-microsoft-standard-wsl2", arch: "amd64", family: "unix"
+
+
+ 1. Clone repository
  > git clone https://github.com/ograysoft/sui-java-sdk
+ > cd sui-java-sdk
+ 2. Build project
+ > mvn package
+ 3. To get objects owned by SUI address run
+ > java -jar SuiSDK-1.0-SNAPSHOT-exec.jar getobjects 0xc8617b3df5511e5789bf4991ac2ecef137f51505
+ 4. To generate Java sources from SUI RPC run
+ > java -jar SuiSDK-1.0-SNAPSHOT-exec.jar generate
 
- 2. Open project from IntelliJ IDEA 2022
-    Build Project (Ctrl + F9)
-
- 3. Choose run configuration
-    *'SUI Class Generator'* - launch **org.ogray.Main** to send request to SUI ('rpc.discover')
-     and generates class ord.sui.SUI according to response
-     this run will overriwrites current ord.sui.SUI sources!
-
-    *'Wallet'* - launch sample application which uses SUI class.
-     before running press 'Edit configuguration' and add command line arguments"
-     **'getobjects < address >'** where <address> is SUI wallet address
-
-
- 
-
-
-
+ 5. To generate Doxygen on SUI sources, install **doxygen** and run
+> doxygen
