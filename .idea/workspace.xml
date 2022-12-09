@@ -7,6 +7,8 @@
     <list default="true" id="7aeaf71e-f504-4364-965e-57314a53bf8d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ogray/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ogray/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +45,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.SUI Class Generator">
+  <component name="RunManager" selected="Application.Wallet">
     <configuration name="SUI Class Generator" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.ogray.Main" />
       <module name="sui-java-sdk" />

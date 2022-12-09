@@ -20,13 +20,11 @@ public class Main {
         SuiClassGenerator generator = new SuiClassGenerator( baseSourceFolder, resp.getResult().getMethods() );
         generator.createSourceFile(basePackage, className);
     }
-    public static void main(String[] args) {
-
+/*    public static void main(String[] args) {
         try {
             generateSUIClass();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-    }
+    }*/
 }

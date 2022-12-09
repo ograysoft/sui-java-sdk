@@ -24,13 +24,13 @@ SUI Java SDK
     Build Project (Ctrl + F9)
 
  3. Choose run configuration
-    'SUI Class Generator' - launch org.ogray.Main to send request to SUI ('rpc.discover')
+    *'SUI Class Generator'* - launch **org.ogray.Main** to send request to SUI ('rpc.discover')
      and generates class ord.sui.SUI according to response
      this run will overriwrites current ord.sui.SUI sources!
 
-    'Wallet' - launch sample application which uses SUI class.
+    *'Wallet'* - launch sample application which uses SUI class.
      before running press 'Edit configuguration' and add command line arguments"
-     ' getobjects <address>' where <address> is SUI wallet address
+     **'getobjects < address >'** where <address> is SUI wallet address
 
 
  
