@@ -70,6 +70,23 @@ public class SUI {
    }
 
    /**
+   * sui_executeTransactionSerializedSig
+   Parameters:
+      tx_bytes : transaction data bytes, as base-64 encoded string
+      signature : `flag || signature || pubkey` bytes, as base-64 encoded string
+      request_type : The request type
+   */
+   public SuiJsonResponse sui_executeTransactionSerializedSig(String _tx_bytes,String _signature,String _request_type) {
+      RpcSuiRequestWithParams req = new RpcSuiRequestWithParams("sui_executeTransactionSerializedSig", 1);
+      req.addParam( _tx_bytes );
+      req.addParam( _signature );
+      req.addParam( _request_type );
+      String request = new JSONObject(req).toString();
+      SuiJsonResponse reply = restTemplate.postForObject(endpoint, prepareRequest(request), SuiJsonResponse.class);
+      return reply;
+   }
+
+   /**
    * sui_getCoinMetadata
    *   Return metadata(e.g., symbol, decimals) for a coin
    Parameters:
@@ -225,10 +242,8 @@ public class SUI {
       RpcSuiRequestWithParams req = new RpcSuiRequestWithParams("sui_getObjectsOwnedByAddress", 1);
       req.addParam( _address );
       String request = new JSONObject(req).toString();
-    //  String response = restTemplate.postForObject(endpoint, prepareRequest(request), String.class);
       SuiJsonResponse reply = restTemplate.postForObject(endpoint, prepareRequest(request), SuiJsonResponse.class);
       return reply;
-  //    return response;
    }
 
    /**
@@ -279,6 +294,20 @@ public class SUI {
    */
    public SuiJsonResponse sui_getTransaction(String _digest) {
       RpcSuiRequestWithParams req = new RpcSuiRequestWithParams("sui_getTransaction", 1);
+      req.addParam( _digest );
+      String request = new JSONObject(req).toString();
+      SuiJsonResponse reply = restTemplate.postForObject(endpoint, prepareRequest(request), SuiJsonResponse.class);
+      return reply;
+   }
+
+   /**
+   * sui_getTransactionAuthSigners
+   *   Return the authority public keys that commits to the authority signature of the transaction.
+   Parameters:
+      digest : the digest of the queried transaction
+   */
+   public SuiJsonResponse sui_getTransactionAuthSigners(String _digest) {
+      RpcSuiRequestWithParams req = new RpcSuiRequestWithParams("sui_getTransactionAuthSigners", 1);
       req.addParam( _digest );
       String request = new JSONObject(req).toString();
       SuiJsonResponse reply = restTemplate.postForObject(endpoint, prepareRequest(request), SuiJsonResponse.class);
@@ -496,6 +525,34 @@ public class SUI {
       req.addParam( _split_count );
       req.addParam( _gas );
       req.addParam( _gas_budget );
+      String request = new JSONObject(req).toString();
+      SuiJsonResponse reply = restTemplate.postForObject(endpoint, prepareRequest(request), SuiJsonResponse.class);
+      return reply;
+   }
+
+   /**
+   * sui_subscribeEvent
+   *   Subscribe to a stream of Sui event
+   Parameters:
+      filter : the filter criteria of the event stream, see the [Sui docs](https://docs.sui.io/build/pubsub#event-filters) for detailed examples.
+   */
+   public SuiJsonResponse sui_subscribeEvent(String _filter) {
+      RpcSuiRequestWithParams req = new RpcSuiRequestWithParams("sui_subscribeEvent", 1);
+      req.addParam( _filter );
+      String request = new JSONObject(req).toString();
+      SuiJsonResponse reply = restTemplate.postForObject(endpoint, prepareRequest(request), SuiJsonResponse.class);
+      return reply;
+   }
+
+   /**
+   * sui_subscribeTransaction
+   *   Subscribe to a stream of Sui event
+   Parameters:
+      filter : the filter criteria of the transaction stream.
+   */
+   public SuiJsonResponse sui_subscribeTransaction(String _filter) {
+      RpcSuiRequestWithParams req = new RpcSuiRequestWithParams("sui_subscribeTransaction", 1);
+      req.addParam( _filter );
       String request = new JSONObject(req).toString();
       SuiJsonResponse reply = restTemplate.postForObject(endpoint, prepareRequest(request), SuiJsonResponse.class);
       return reply;
