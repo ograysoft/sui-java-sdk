@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aeaf71e-f504-4364-965e-57314a53bf8d" name="Changes" comment="" />
+    <list default="true" id="7aeaf71e-f504-4364-965e-57314a53bf8d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +54,7 @@
     <configuration name="Wallet" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.ogray.sui.samples.Wallet" />
       <module name="sui-java-sdk" />
+      <option name="PROGRAM_PARAMETERS" value="getobjects 0xc8617b3df5511e5789bf4991ac2ecef137f51505" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
