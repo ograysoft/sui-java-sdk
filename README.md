@@ -33,10 +33,14 @@ OS name: "linux", version: "5.10.102.1-microsoft-standard-wsl2", arch: "amd64", 
 
  1. Clone repository
  > git clone https://github.com/ograysoft/sui-java-sdk
- > cd sui-java-sdk
+ 
+> cd sui-java-sdk
  2. Build project
  > mvn package
+
  3. To get objects owned by SUI address run
+ > cd target
+
  > java -jar SuiSDK-1.0-SNAPSHOT-exec.jar getobjects 0xc8617b3df5511e5789bf4991ac2ecef137f51505
  4. To generate Java sources from SUI RPC run
  > java -jar SuiSDK-1.0-SNAPSHOT-exec.jar generate
