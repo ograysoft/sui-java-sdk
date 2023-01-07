@@ -47,8 +47,15 @@ OS name: "linux", version: "5.10.102.1-microsoft-standard-wsl2", arch: "amd64", 
 
  4. To generate Java sources from SUI RPC run
  > java -jar SuiSDK-1.0-SNAPSHOT-exec.jar generate
+ 
+ *! if you got error like Exception in thread "main" java.lang.UnsupportedClassVersionError: org/ogray/sui/samples/Wallet has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+ Be sure that you run java binary from folder returned by **mnv -version** !*
 
  5. To generate Doxygen on SUI sources, install **doxygen** and run
 > doxygen
 
   Generated Javadoc is [here](https://ograysoft.github.io/sui-java-sdk/classorg_1_1sui_1_1_s_u_i.html)
+  
+  6. To get all objects owned by SUI wallet run
+  
+> java -jar SuiSDK-1.0-SNAPSHOT-exec.jar getobjects 0xaddress
